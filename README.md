@@ -1,6 +1,6 @@
 # corewf_scratch
 
-Simple project to demonstrate corewf compatibility issues between Windows and Linux/Mac based on the entry point's project's targeting of netcoreapp3.1, which corewf will want to use WPF targets that do not exist outside of windows.
+Simple project to demonstrate corewf compatibility issues between Windows and Linux/Mac whenever the entry point project targets netcoreapp3.1.  It fails on Linux/Mac because corewf will want to use WPF targets that do not exist outside of Windows.
 
 In Mac OSX or Linux, run the following script to download assemblies prior to running the test
 
