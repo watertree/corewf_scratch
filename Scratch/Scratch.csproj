@@ -5,11 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="System.Activities">
+    
+    <Reference Include="System.Activities" Condition="'$(OS)' == 'Unix'">
       <HintPath>..\..\corewf\System.Activities\lib\netstandard2.0\System.Activities.dll</HintPath>
     </Reference>
-    <Reference Include="System.Xaml">
+    <Reference Include="System.Xaml" Condition="'$(OS)' == 'Unix'">
       <HintPath>..\..\corewf\System.Activities\lib\netstandard2.0\System.Xaml.dll</HintPath>
     </Reference>
+    <PackageReference Include="UiPath.Workflow" Version="1.0.0-20200505-01" Condition="'$(OS)' == 'Windows_NT'"/>
   </ItemGroup>
 </Project>
