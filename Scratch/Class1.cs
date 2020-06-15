@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Activities.XamlIntegration;
+using System.IO;
 
 namespace Scratch
 {
@@ -14,7 +16,8 @@ namespace Scratch
     <WriteLine Text=""Hello World!"" />
   </Sequence>
 </Activity>";
-            Console.WriteLine(xaml);
+            var helloWorldActivity = ActivityXamlServices.Load(new StringReader(xaml));
+System.Activities.WorkflowInvoker.Invoke(helloWorldActivity);
         }
     }
 }
