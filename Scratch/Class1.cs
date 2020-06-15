@@ -17,7 +17,7 @@ namespace Scratch
   </Sequence>
 </Activity>";
             var helloWorldActivity = ActivityXamlServices.Load(new StringReader(xaml));
-System.Activities.WorkflowInvoker.Invoke(helloWorldActivity);
+            System.Activities.WorkflowInvoker.Invoke(helloWorldActivity);
         }
     }
 }
